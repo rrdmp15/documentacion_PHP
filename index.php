@@ -1,13 +1,14 @@
 <?php
 
-spl_autoload_register(function ($className) {
-    $filePath = __DIR__ . '/' . $className . '.php';
-    if (file_exists($filePath)) {
-        require_once $filePath;
-    }
-});
+namespace MiProyecto\MiModulo;
 
-$objeto = new MiClase();
+class MiClase {
+    public function __construct() {
+        echo 'Instancia de MiClase creada';
+    }
+}
+
+$objeto = new MiProyecto\MiModulo\MiClase();
 $objeto->metodo();
   
 ?>
