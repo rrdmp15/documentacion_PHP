@@ -1,79 +1,44 @@
 <?php
-// operadores aritmeticos
+// Array
+$frutas = array("Manzana", "Banana", "Naranja");
+echo "array de frutas: ";
+print_r($frutas);
 
-$a = 10;
-$b = 5;
+// Acceder a un elemento del array
+echo "Elemento 0: " . $frutas[0];
 
-$suma = $a + $b;
-$resta = $a - $b;
-$multiplicacion = $a * $b;
-$division = $a / $b;
-$modulo = $a % $b;
+// array asociativo
+$edades = array("Juan" => 25, "María" => 30, "Pedro" => 35);
+echo "array asociativo de edades: ";
+print_r($edades);
 
-// operadores de asignacion
+// Acceder a un elemento del array asociativo
+echo "Edad de María: " . $edades["María"];
 
-$a = 10;
-$b = 5;
+// Funciones para arrays
+$numeros = array(1, 2, 3, 4, 5);
 
-$a += $b; 
-$a -= $b; 
-$a *= $b;
-$a /= $b; 
-$a %= $b;
+// Contar elementos en el array
+$conteo = count($numeros);
+echo "Número de elementos: " . $conteo;
 
-// operadores de arrays
+// Ordenar el array
+sort($numeros);
+echo "array ordenado: ";
+print_r($numeros);
 
-$array1 = [1, 2, 3];
-$array2 = [4, 5, 6];
+// Verificar si un elemento existe en el array
+$existe = in_array(3, $numeros);
+echo "¿El número 3 existe en el array? " . ($existe ? "Sí" : "No");
 
-$concatenacion = $array1 + $array2; 
+// Obtener las claves de un array asociativo
+$claves = array_keys($edades);
+echo "Claves del array asociativo de edades: ";
+print_r($claves);
 
-// operadores de comparacion
-
-$a = 10;
-$b = 5;
-
-$igual = ($a == $b); 
-$diferente = ($a != $b); 
-$mayor = ($a > $b); 
-$menor = ($a < $b); 
-$mayorOigual = ($a >= $b); 
-$menorOigual = ($a <= $b); 
-
-// operadores logicos
-
-$a = true;
-$b = false;
-
-$and = ($a && $b); 
-$or = ($a || $b); 
-$not = !$a; 
-
-// operadores bitwise
-
-$a = 5;
-$b = 3;
-
-$andBitwise = $a & $b;
-$orBitwise = $a | $b;
-$xorBitwise = $a ^ $b;
-$desplazamientoIzquierda = $a << $b; 
-$desplazamientoDerecha = $a >> $b;
-
-
-// operador de ejecucion
-
-$resultado = `ls -la`; 
-
-// operador de control de errores
-
-$resultado = @file_get_contents("archivo.txt");
-
-// operador de incremento y decremento
-
-$a = 5;
-
-$incremento = ++$a; 
-$decremento = --$a; 
-
+// Obtener los valores de un array asociativo
+$valores = array_values($edades);
+echo "Valores del array asociativo de edades: ";
+print_r($valores);
 ?>
+
