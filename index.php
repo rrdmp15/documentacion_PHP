@@ -1,46 +1,28 @@
 <?php
-    // Estructura de control condicional "if":
-    $edad = 25;
-    
-    if ($edad >= 18) {
-        echo "Eres mayor de edad.";
-    } else {
-        echo "Eres menor de edad.";
-    }
-    // Estructura de control condicional "switch":
-    $diaSemana = "Martes";
-    
-    switch ($diaSemana) {
-        case "Lunes":
-            echo "Hoy es lunes.";
-            break;
-        case "Martes":
-            echo "Hoy es martes.";
-            break;
-        case "Miércoles":
-            echo "Hoy es miércoles.";
-            break;
-        default:
-            echo "Hoy no es lunes, martes ni miércoles.";
-            break;
-    }
-    // Estructura de control de repetición "for":
-    for ($i = 1; $i <= 5; $i++) {
-        echo "El valor de i es: " . $i . "<br>";
-    }
-    // Estructura de control de repetición "while":
-    $num = 1;
-    
-    while ($num <= 10) {
-        echo $num . " ";
-        $num++;
-    }
-    // Estructura de control de repetición "do-while":
-    $num = 1;
-    
-    do {
-        echo $num . " ";
-        $num++;
-    } while ($num <= 10);
+// Ejemplo de función definida por el usuario:
+function saludar($nombre) {
+    echo "¡Hola, $nombre!";
+}
+
+saludar("Juan");
+
+// Ejemplo de función en PHP:
+echo strlen("Hola");
+
+// Ejemplo de función que retorna un valor:
+function sumar($num1, $num2) {
+    return $num1 + $num2;
+}
+
+$resultado = sumar(3, 5);
+echo "El resultado de la suma es: $resultado";
+
+// Ejemplo de función que no retorna un valor:
+function imprimirFecha() {
+    echo date("d/m/Y");
+}
+
+echo "La fecha de hoy es: ";
+imprimirFecha();
 ?>
 
