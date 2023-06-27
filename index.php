@@ -1,26 +1,14 @@
 <?php
 
-interface Animal {
-    public function hacerSonido();
-  }
-  
-  class Perro implements Animal {
-    public function hacerSonido() {
-      echo "Woof!";
+spl_autoload_register(function ($className) {
+    $filePath = __DIR__ . '/' . $className . '.php';
+    if (file_exists($filePath)) {
+        require_once $filePath;
     }
-  }
-  
-  class Gato implements Animal {
-    public function hacerSonido() {
-      echo "Meow!";
-    }
-  }
-  
-  $perro = new Perro();
-  $gato = new Gato();
-  
-  $perro->hacerSonido(); 
-  $gato->hacerSonido(); 
+});
+
+$objeto = new MiClase();
+$objeto->metodo();
   
 ?>
 
