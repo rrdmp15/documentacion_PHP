@@ -1,12 +1,17 @@
 <?php
-// Variable
-$nombre = "Juan";
-$edad = 25;
-echo "Mi nombre es $nombre y tengo $edad años.";
+$entero = 10;
+$puntoFlotante = 3.14;
+$cadena = "Hola, mundo!";
+$booleano = true;
+$arreglo = [1, 2, 3];
+$objeto = new stdClass();
+$nulo = null;
 
-// Constante
-define("PI", 3.1416);
-$radio = 5;
-$area = PI * $radio * $radio;
-echo "El área de un círculo con radio $radio es: $area";
+var_dump($entero);
+var_dump($puntoFlotante);
+var_dump($cadena);
+var_dump($booleano);
+var_dump($arreglo);
+var_dump($objeto);
+var_dump($nulo);
 ?>
