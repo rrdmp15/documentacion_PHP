@@ -1,11 +1,30 @@
 <?php
-class MiClase {
-    public static function metodoEstatico() {
-      echo "Este es un método estático.";
+
+abstract class Figura {
+    protected $color;
+  
+    public function __construct($color) {
+      $this->color = $color;
+    }
+  
+    abstract public function calcularArea();
+  }
+  
+  class Cuadrado extends Figura {
+    private $lado;
+  
+    public function __construct($color, $lado) {
+      parent::__construct($color);
+      $this->lado = $lado;
+    }
+  
+    public function calcularArea() {
+      return $this->lado * $this->lado;
     }
   }
   
-  MiClase::metodoEstatico();
+  $cuadrado = new Cuadrado("rojo", 5);
+  echo "El área del cuadrado es: " . $cuadrado->calcularArea();
   
 ?>
 
